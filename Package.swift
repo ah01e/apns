@@ -11,12 +11,12 @@ let package = Package(
         .library(name: "VaporAPNS", targets: ["VaporAPNS"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/ah01e/phoenixapns.git", branch: "main"),
+        .package(url: "https://github.com/ah01e/APNSwift.git", branch: "main"),
         .package(url: "https://github.com/vapor/vapor.git", from: "4.77.2"),
     ],
     targets: [
         .target(name: "VaporAPNS", dependencies: [
-            .product(name: "APNS", package: "phoenixapns"),
+            .product(name: "APNS", package: "APNSwift"),
             .product(name: "Vapor", package: "vapor"),
         ]),
         .testTarget(name: "VaporAPNSTests", dependencies: [
