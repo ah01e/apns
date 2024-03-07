@@ -2,25 +2,25 @@
 import PackageDescription
 
 let package = Package(
-    name: "vapor-apns",
+    name: "phoenix-apns",
     platforms: [
        .macOS(.v13),
        .iOS(.v16)
     ],
     products: [
-        .library(name: "VaporAPNS", targets: ["VaporAPNS"]),
+        .library(name: "PhoenixAPNS", targets: ["PhoenixAPNS"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/swift-server-community/APNSwift.git", from: "5.0.0"),
+        .package(url: "https://github.com/ah01e/phoenixapns.git", branch: "main"),
         .package(url: "https://github.com/vapor/vapor.git", from: "4.77.2"),
     ],
     targets: [
-        .target(name: "VaporAPNS", dependencies: [
-            .product(name: "APNS", package: "apnswift"),
+        .target(name: "PhoenixAPNS", dependencies: [
+            .product(name: "APNS", package: "phoenixapns"),
             .product(name: "Vapor", package: "vapor"),
         ]),
-        .testTarget(name: "VaporAPNSTests", dependencies: [
-            .target(name: "VaporAPNS"),
+        .testTarget(name: "PhoenixAPNSTests", dependencies: [
+            .target(name: "PhoenixAPNS"),
             .product(name: "XCTVapor", package: "vapor"),
         ]),
     ]
