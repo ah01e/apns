@@ -43,7 +43,8 @@ class APNSTests: XCTestCase {
                     expiration: .immediately,
                     priority: .immediately,
                     topic: "MY_TOPC",
-                    payload: Payload()
+                    payload: Payload(),
+                    contentAvailable: 1
                 ),
                 deviceToken: "98AAD4A2398DDC58595F02FA307DF9A15C18B6111D1B806949549085A8E6A55D"
             )
