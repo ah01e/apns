@@ -22,7 +22,7 @@ class APNSTests: XCTestCase {
                 keyIdentifier: "9UC9ZLQ8YW",
                 teamIdentifier: "ABBM6U9RM5"
             ),
-            environment: .sandbox
+            environment: .development
         )
 
         app.apns.containers.use(
@@ -67,7 +67,7 @@ class APNSTests: XCTestCase {
 
         let apnsConfig = APNSClientConfiguration(
             authenticationMethod: authConfig,
-            environment: .sandbox
+            environment: .development
         )
 
         app.apns.containers.use(
@@ -130,7 +130,7 @@ class APNSTests: XCTestCase {
 
         let apnsConfig = APNSClientConfiguration(
             authenticationMethod: authConfig,
-            environment: .sandbox
+            environment: .development
         )
 
         app.apns.containers.use(
@@ -180,7 +180,7 @@ class APNSTests: XCTestCase {
 
         let apnsConfig = APNSClientConfiguration(
             authenticationMethod: authConfig,
-            environment: .sandbox
+            environment: .development
         )
 
         app.apns.containers.use(
